@@ -1,0 +1,533 @@
+// .image 
+//   width: 256px
+//   height: 256px
+//   position: absolute
+  
+//   background-image: url(../assets/images/ninja-running.png)
+//   +animation(run 1s steps(6) infinite )
+    
+// +keyframes(run)
+//     100%
+//       background-position: -1500px
+
+.image
+    width: 240px
+    height: 296px
+    background-image: url(../assets/images/running_man.png)
+    +animation(manRun 1s steps(6) 1 )
+    transform: scale(1,1)
+
++keyframes(manRun)
+   
+    100%
+      background-position: -1440px 0px
+
+.content
+   position: fixed
+   top: -50px
+   color: white
+   margin-top: 30px
+      
+.content.show
+    top: 0px
+    transition: top 1s ease-in
+    height: 100vh
+
+.cardContainer
+    border: 1px solid red
+    width: 30px
+    height: 50px
+    overflow: hidden
+    position: relative
+
+.deckCard
+    width: 30px
+    height: 50px
+    position: absolute
+    top: 0
+    div 
+        width: 100%
+        height: 50%
+        justify-content: center
+        display: flex
+        font-size: 3em
+    .upperCard
+        border-bottom: 1px
+    .upperCard span
+        transform: translateY(50%)
+    .lowerCard 
+        border-top: 1px solid blue
+    .lowerCard span
+        transform: translateY(-50%)
+
+.deckCard.back
+    opacity: 0
+.deckCard.back.unfold
+    transition: opacity 3s ease
+    opacity: 1
+
+.deckCard.front
+    opacity: 1
+.deckCard.front.fold
+    opacity: 0
+    transition: transform 2s ease, opacity 2s ease
+    transform: rotateX(-180deg)
+    
+.flipContainer
+    border: 2px solid #ecf7f3
+    width: 160px
+    height: 160px
+    perspective: 600px
+    border-radius: 2px
+    padding: 4px
+    text-align: center
+    box-shadow: 1px 1px 0px 0px #dedec5
+    div
+        width: 150px
+        height: 150px
+        position: absolute
+        text-align: center
+        backface-visibility: hidden
+        transition: transform 1s ease-in-out
+        
+        &.flipBackSide
+            transform: perspective(600px) rotateY(180deg)
+            background-color: $grey9
+        &.flipFrontSide
+            transform: perspective(600px) rotateY(0deg)
+            background-color: yellow
+
+.flipContainer:hover 
+    .flipBackSide
+        transform: perspective(600px) rotateY(0deg)
+    .flipFrontSide
+        transform: perspective(600px) rotateY(180deg)
+
+.cubeContainer
+    border: 1px solid gray
+    width: 250px
+    height: 250px
+    margin: 15px 0px
+    perspective: 1000px
+    .cube
+        font-size: 4em
+        width: 2em
+        margin: 1.5em auto
+        transform-style: preserve-3d
+        transform: rotateX(-40deg) rotateY(32deg)
+        .side
+            width: 2em
+            height: 2em
+            background: #FF7257
+            border: 1px solid rgba(0,0,0,.5)
+            color: white
+            text-align: center
+            line-height: 2em
+            position: absolute
+            opacity: .3
+        .front  
+            transform:                  translateZ(1em)
+        .top
+            transform: rotatex(90deg) translateZ(1em)
+        .right
+            transform: rotateY(90deg) translateZ(1em)
+        .left
+            transform: rotateY(-90deg) translateZ(1em)
+        .bottom
+            transform: rotateX(-90deg) translateZ(1em)
+        .back
+            transform: rotateY(-180deg) translateZ(1em)
+
+/*Start Flip Component */
+.flipClock
+	display: flex
+	justify-content: space-between
+	width: 3 * 140px + 80px
+
+.flipUnitContainer
+	display: block
+	position: relative
+	width: 140px
+	height: 120px
+	perspective-origin: 50% 50%
+	perspective: 300px
+	background-color: $card
+	border-radius: 3px
+	box-shadow: 0px 10px 10px -10px grey
+
+.upperCard, .lowerCard
+	display: flex
+	position: relative
+	justify-content: center
+	width: 100%
+	height: 50%
+	overflow: hidden
+	border: 1px solid $border
+	
+	span
+		font-size: $font-size
+		font-family: $font-family
+		font-weight: $font-width
+		color: $font-color
+
+.upperCard
+	align-items: flex-end
+	border-bottom: 0.5px solid $border
+	border-top-left-radius: 3px
+	border-top-right-radius: 3px
+	
+	span
+		transform: translateY(50%)
+
+.lowerCard
+	align-items: flex-start
+	border-top: 0.5px solid $border
+	border-bottom-left-radius: 3px
+	border-bottom-right-radius: 3px
+	
+	span
+		transform: translateY(-50%)
+
+.flipCard
+	display: flex
+	justify-content: center
+	position: absolute
+	left: 0
+	width: 100%
+	height: 50%
+	overflow: hidden
+	backface-visibility: hidden
+	
+	span
+		font-family: $font-family
+		font-size: $font-size
+		font-weight: $font-width
+		color: $font-color
+	
+	&.unfold
+		top: 50%
+		align-items: flex-start
+		transform-origin: 50% 0%
+		transform: rotateX(180deg) // from 180 to 0
+		background-color: $card
+		border-bottom-left-radius: 3px
+		border-bottom-right-radius: 3px
+		border: 0.5px solid $border
+		border-top: 0.5px solid $border
+		
+		span
+			transform: translateY(-50%)
+		
+	&.fold
+		top: 0%
+		align-items: flex-end
+		transform-origin: 50% 100%
+		transform: rotateX(0deg) // from 0 to -180
+		background-color: $card
+		border-top-left-radius: 3px
+		border-top-right-radius: 3px
+		border: 0.5px solid $border
+		border-bottom: 0.5px solid $border
+		
+		span
+			transform: translateY(50%)	
+
+.fold
+	@include animation(fold, 1s, $easeInOut, 1, normal, forwards)
+	transform-style: preserve-3d
+
+.unfold
+	@include animation(unfold, 1s, $easeInOut, 1, normal, forwards)
+	transform-style: preserve-3d
+
+@keyframes fold
+	0%
+		transform: rotateX(0deg)
+	100%
+		transform: rotateX(-180deg)
+
+@keyframes unfold
+	0%
+		transform: rotateX(180deg)
+	100%
+		transform: rotateX(0deg)
+
+/*End Flip Component */
+
+.container-fluid
+    background-color: $grey11
+.mainWrapper
+    display: flex
+    justify-content: center
+    transition: all 0.6s ease-in-out
+    height: 100vh
+
+/*Start Curve text*/
+.marriageTitle
+    position: relative
+    width: 100%
+    height: 20px
+    transform-origin: bottom center
+    padding-bottom: 50px
+    font-size: 25px
+    span
+        display: inline-block
+    .l1
+        transform: translateX(-1px) translateY(37px) rotate(-31deg)
+    .l2
+       transform: translateX(-2px) translateY(27px) rotate(-27deg)
+    .l3
+        transform: translateX(-2px) translateY(24px) rotate(-25deg)
+    .l4
+        transform: translateX(-3px) translateY(19px) rotate(-22deg)
+    .l5
+        transform: translateX(-3px) translateY(13px) rotate(-19deg)
+    .l6
+        transform: translateX(-3px) translateY(9px) rotate(-16deg)
+    .l7
+        transform: translateX(-2px) translateY(7px) rotate(-14deg)
+    .l8
+        transform: translateX(-2px) translateY(5px) rotate(-11deg)
+    .l9
+        transform: translateX(-1px) translateY(2px) rotate(-7deg)
+    .l10
+        transform: translateX(-1px) translateY(1px) rotate(-4deg)
+    .l11
+        transform: translateX(0px) translateY(0px) rotate(-1deg)
+    .l12
+        transform: translateX(0px) translateY(0px) rotate(0deg)
+    .l13
+        transform: translateX(0px) translateY(0px) rotate(3deg)
+    .l14
+        transform: translateX(1px) translateY(2px) rotate(7deg)
+    .l15
+        transform: translateX(2px) translateY(3px) rotate(9deg)
+    .l16
+        transform: translateX(2px) translateY(6px) rotate(12deg)
+    .l17
+        transform: translateX(3px) translateY(11px) rotate(17deg)
+    .l18
+        transform: translateX(3px) translateY(16px) rotate(20deg)
+    .l19
+        transform: translateX(3px) translateY(22px) rotate(24deg)
+    .l20
+        transform: translateX(2px) translateY(26px) rotate(26deg)
+    .l21
+        transform: translateX(2px) translateY(31px) rotate(28deg)
+    .l22
+        transform: translateX(0px) translateY(39px) rotate(32deg)
+
+.saveTitle
+    position: relative
+    width: 100%
+    height: 20px
+    transform-origin: bottom center
+    padding-top: 50px
+    font-size: 25px
+    span
+        display: inline-block
+    .l1
+        transform: translateX(0px) translateY(-20px) rotate(27deg)
+    .l2
+        transform: translateX(-1px) translateY(-14px) rotate(22deg)
+    .l3
+        transform: translateX(-1px) translateY(-8px) rotate(17deg)
+    .l4
+        transform: translateX(-1px) translateY(-4px) rotate(12deg)
+    .l5
+        transform: translateX(-1px) translateY(-2px) rotate(9deg)
+    .l6
+        transform: translateX(0px) translateY(-1px) rotate(5deg)
+    .l7
+        transform: translateX(0px) translateY(0px) rotate(0deg)
+    .l8
+        transform: translateX(0px) translateY(0px) rotate(-4deg)
+    .l9
+        transform: translateX(1px) translateY(-1px) rotate(-8deg)
+    .l10
+        transform: translateX(1px) translateY(-3px) rotate(-11deg)
+    .l11
+        transform: translateX(1px) translateY(-8px) rotate(-17deg)
+    .l12
+        transform: translateX(1px) translateY(-13px) rotate(-22deg)
+    .l13
+        transform: translateX(0px) translateY(-19px) rotate(-27deg)
+/*End Curve text*/
+
+.contentWrapper
+    text-align: center
+    div
+        text-align: center
+    .brideGroom
+        margin: 20px
+        font-size: 2em
+        span
+            color: $gold3
+    .countdown
+        margin: 20px
+        font-size: 1.3em
+    .marriageDate
+        padding: 2px 10px
+        margin: 10px
+        .leftSide
+            display: inline-block
+            //background-image: url(../assets/images/rose.jpg) no-repeat left
+            //padding: 0 0 0 130px
+    button
+        display: inline-block
+        margin: 50px
+
+.responsiveImage
+    display: block
+    max-width: 100%
+    height: auto
+.sideBar
+    overflow: scroll
+    background-color: $grey8
+    .storyTitle
+        text-align: center
+        padding: 10px
+    .groom > div
+        float: right
+
+    .storySection
+        position: relative
+        padding: 50px 0
+        float: left
+        width: 100%
+        .storyLine
+            background: $gold3
+            position: absolute
+            height: 100%
+            width: 1px
+            top: 0
+            left: 50%
+            &:before
+                background: $gold3
+                color: #fff
+                content: '\e84e'
+                font-family: "fontello"
+                height: 32px
+                width: 32px
+                position: absolute
+                border-radius: 50%
+                font-size: 19px
+                line-height: 33px
+                bottom: 0
+                left: -16px
+            &:after
+                background: $gold3
+                color: #fff
+                content: '\e84e'
+                font-family: "fontello"
+                height: 32px
+                width: 32px
+                position: absolute
+                border-radius: 50%
+                font-size: 19px
+                line-height: 33px
+                top: 0
+                left: -16px
+        .time:before
+            background: $gold3
+            color: #fff
+            border-radius: 50%
+            font-family: "fontello"
+            content: '\e854'
+            height: 32px
+            width: 32px
+            position: absolute
+            right: -16px
+            top: 13px
+            font-size: 19px
+            line-height: 31px
+        .date
+            margin-top: 200px
+            &:before
+                background: $gold3
+                color: #fff
+                content: '\f228'
+                font-family: "fontello"
+                height: 32px
+                width: 32px
+                position: absolute
+                border-radius: 50%
+                left: -16px
+                top: 13px
+                font-size: 19px
+                line-height: 33px
+        .together
+            margin-top: -30px
+            &:before
+                background: $gold3
+                color: #fff
+                border-radius: 50%
+                font-family: "fontello"
+                content: '\e84c'
+                height: 32px
+                width: 32px
+                position: absolute
+                right: -16px
+                top: 13px
+                font-size: 19px
+                line-height: 31px
+        .offer
+            margin-top: 180px
+            &:before
+                background: $gold3
+                color: #fff
+                content: '\e800'
+                font-family: "fontello"
+                height: 32px
+                width: 32px
+                position: absolute
+                border-radius: 50%
+                left: -16px
+                top: 13px
+                font-size: 19px
+                line-height: 31px
+        .storyContent
+            position: relative
+            background: #fff
+            padding: 10px
+            border-radius: 2px
+            display: block
+            float: left
+            &.left
+                margin-right: 30px
+                &:after
+                    content: ''
+                    position: absolute
+                    width: 0
+                    height: 0
+                    border-top: 10px solid transparent
+                    border-bottom: 10px solid transparent
+                    border-left: 10px solid #fff
+                    top: 20px
+                    right: -10px
+            &.right
+                margin-left: 30px
+                &:after
+                    content: ''
+                    position: absolute
+                    width: 0
+                    height: 0
+                    border-top: 10px solid transparent
+                    border-bottom: 10px solid transparent
+                    border-right: 10px solid #fff
+                    top: 20px
+                    left: -10px
+            .storyCBlock
+                float: left
+                width: 100%
+            .storyDate
+                background: $gold3
+                padding: 8px 15px
+                display: inline-block
+                border-radius: 20px
+                width: 160px
+                text-align: center
+                color: #fff
+                margin-bottom: 10px
+            .textRight
+                text-align: right

@@ -1,0 +1,101 @@
+=font($font-size: null, $line-height: null, $color: null, $font-weight: null, $font-family: null)
+  font-size: $font-size
+  line-height: $line-height
+  color: $color
+  font-weight: $font-weight
+  font-family: $font-family
+
+=absolutePosition($top: null, $right: null, $bottom: null, $left: null)
+  position: absolute
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+=size($width: null, $height: null)
+  width: $width
+  height: $height
+
+=icon($width: null, $height: null, $positionX: null, $positionY: null)
+  width: $width
+  height: $height
+  background-position: $positionX $positionY
+
+=relativeVerticleCenter($height)
+  height: $height
+  margin-top: -$height / 2
+  top: 50%
+
+=vPadding($top, $bottom)
+  padding-top: $top
+  padding-bottom: $bottom
+
+=vMargin($top, $bottom)
+  margin-top: $top
+  margin-bottom: $bottom
+
+=color($color: null, $backgroundColor: null)
+  color: $color
+  background-color: $backgroundColor
+
+//Flex mixins
+=flexbox
+  display: -webkit-flex
+  display: -ms-flexbox //ie
+  display: flex
+
+=inline-flex
+  display: -webkit-inline-flex
+  display: -ms-inline-flexbox
+  display: inline-flex
+
+=flex-direction($direction)
+  -webkit-flex-direction: $direction
+  -ms-flex-direction: $direction
+  flex-direction: $direction
+
+=justify-content($value)
+  -webkit-justify-content: $value
+  -ms-justify-content: $value
+  justify-content: $value
+
+=align-content($align)
+  -webkit-align-content: $align
+  -moz-align-content: $align
+  -ms-align-content: $align
+  align-content: $align
+
+=align-items($align)
+  -webkit-align-items: $align
+  -moz-align-items: $align
+  -ms-align-items: $align
+  align-items: $align
+
+=box-shadow($h-offset: null, $v-offset: null, $blur: null, $spread: null, $color: null)
+  -webkit-box-shadow: $h-offset $v-offset $blur $spread $color
+  -moz-box-shadow: $h-offset $v-offset $blur $spread $color
+  -ms-box-shadow: $h-offset $v-offset $blur $spread $color
+  box-shadow: $h-offset $v-offset $blur $spread $color
+
+//Animation
+=keyframes($name)
+  @-o-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-webkit-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+=animationDelay($time)
+  animation-delay: $time
+  -ms-animation-delay: $time
+  -webkit-animation-delay: $time
+  -moz-animation-delay: $time
+
+=animation($name: null, $duration: null, $timing-function: null, $iteration-count: null, $direction: null, $fill-mode: null)
+  -ms-animation: $name $duration $timing-function $iteration-count $direction $fill-mode
+  -moz-animation: $name $duration $timing-function $iteration-count $direction $fill-mode
+  -webkit-animation: $name $duration $timing-function $iteration-count $direction $fill-mode
+  animation: $name $duration $timing-function $iteration-count $direction $fill-mode
