@@ -359,8 +359,9 @@
     div
         text-align: center
     .brideGroom
+        font-family: 'Great Vibes'
         margin: 20px
-        font-size: 2em
+        font-size: 3em
         span
             color: $gold3
     .countdown
@@ -405,8 +406,8 @@
             &:before
                 background: $gold3
                 color: #fff
-                content: '\e84e'
-                font-family: "fontello"
+                content: '\f004'
+                font-family: "Font Awesome 5 Free"
                 height: 32px
                 width: 32px
                 position: absolute
@@ -418,8 +419,8 @@
             &:after
                 background: $gold3
                 color: #fff
-                content: '\e84e'
-                font-family: "fontello"
+                content: '\f004'
+                font-family: "Font Awesome 5 Free"
                 height: 32px
                 width: 32px
                 position: absolute
@@ -432,8 +433,8 @@
             background: $gold3
             color: #fff
             border-radius: 50%
-            font-family: "fontello"
-            content: '\e854'
+            font-family: "Font Awesome 5 Free"
+            content: '\f017'
             height: 32px
             width: 32px
             position: absolute
@@ -446,8 +447,8 @@
             &:before
                 background: $gold3
                 color: #fff
-                content: '\f228'
-                font-family: "fontello"
+                content: '\f073'
+                font-family: "Font Awesome 5 Free"
                 height: 32px
                 width: 32px
                 position: absolute
@@ -462,8 +463,8 @@
                 background: $gold3
                 color: #fff
                 border-radius: 50%
-                font-family: "fontello"
-                content: '\e84c'
+                font-family: "Font Awesome 5 Free"
+                content: '\f228'
                 height: 32px
                 width: 32px
                 position: absolute
@@ -476,8 +477,8 @@
             &:before
                 background: $gold3
                 color: #fff
-                content: '\e800'
-                font-family: "fontello"
+                content: '\f000'
+                font-family: "Font Awesome 5 Free"
                 height: 32px
                 width: 32px
                 position: absolute
@@ -531,3 +532,50 @@
                 margin-bottom: 10px
             .textRight
                 text-align: right
+.marriageDate
+    background-image: url(../assets/images/heart-swirls-date.png)
+    height: 200px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+.unit
+    text-transform: capitalize
+.modal-body
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/static/media/invite-background.b56e68c9.jpg);
+    height: 50vh;
+@media (min-width: 426px)
+    .image
+        position: fixed
+    
+@media (max-width: 425px)
+    .storyLine
+        display: none
+        &:before
+            display: none
+        &:after
+            display: none
+    .time:before, .date:before, .together:before, .offer:before
+        display: none
+    .sideBar .storySection .date
+        margin-top: 2px
+
+    .flipClock
+        width: 350px
+        .flipUnitContainer
+            height: 80px
+        div span
+            font-size: 3em
+    .content
+        position: static
+        z-index: 12
+    .image
+        position: absolute
+
+    
+        

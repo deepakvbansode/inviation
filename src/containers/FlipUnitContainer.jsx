@@ -52,6 +52,7 @@ export const FlipUnitContainer = ({ digit, shuffle, unit }) => {
       <StaticCard position={"lowerCard"} digit={previousDigit} />
       <AnimatedCard digit={digit1} animation={animation1} />
       <AnimatedCard digit={digit2} animation={animation2} />
+      <div className="unit">{unit}</div>
     </div>
   );
 };

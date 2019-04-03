@@ -1,6 +1,6 @@
 import React from "react";
-import { CountDownComponent } from "./CountDownComponent";
 import { FlipClock } from "./FlipClockComponent";
+import InviteModalComponent from "./InviteModalComponent";
 
 export class HomeComponent extends React.Component {
   constructor(props) {
@@ -11,24 +11,18 @@ export class HomeComponent extends React.Component {
     this.marriageDate = new Date(2019, 4, 11, 12, 30);
   }
 
-  // componentDidMount() {
-  //   //show content after animation finished
-  //   setTimeout(() => {
-  //     this.setState({ showContent: true });
-  //   }, 2000);
-  // }
-
   showContent = () => {
     this.setState({ showContent: true });
   };
   render() {
     const { isFullWidth, toggleView } = this.props;
     const { showContent } = this.state;
-    let homeClasses = isFullWidth ? "mainWrapper col-12" : "mainWrapper col-6";
+    let homeClasses = isFullWidth ? "mainWrapper col-12" : "mainWrapper col-md-6";
     let contentClasses = showContent ? "contentWrapper" : "d-none";
     let toggleBtnClass = showContent ? "toggleBtn" : "d-none";
     return (
       <div className={homeClasses}>
+        <InviteModalComponent></InviteModalComponent>
         <div className="image" onAnimationEnd={this.showContent} />
         <div className={`content ${showContent ? "show" : ""}`}>
           {/* <div className={toggleBtnClass}>
@@ -72,11 +66,7 @@ export class HomeComponent extends React.Component {
             <FlipClock marriageDate={this.marriageDate} />
 
             <div className="marriageDate">
-              <span className="leftSide">
-                <span className="rightSide">
-                  11<span>.</span>05<span>.</span>2019
-                </span>
-              </span>
+                11.05.2019
             </div>
             <div className="saveTitle">
               <span className="l1">S</span>
