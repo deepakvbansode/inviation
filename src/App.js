@@ -1,36 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import InvitationContainer from "./containers/InvitationContainer";
+import AdminContainer from "./containers/AdminContainer";
+import RequireAuthRoute from "./shared/components/RequiredAuthRoute";
+import LoginContainer from "./containers/LoginContainer";
+import RequireUnauthRoute from "./shared/components/RequiredUnauthRoute";
 
-import { HomeComponent } from "./components/HomeComponent";
-import { SideBarComponent } from "./components/SideBarComponent";
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isFullWidth: true
-    };
-  }
-  toggleView = () => {
-    this.setState(prevStage => {
-      return {
-        isFullWidth: !prevStage.isFullWidth
-      };
-    });
-  };
-  render() {
-    const { isFullWidth } = this.state;
-    return (
-      <div className="container-fluid">
-        <div className="row">
-          <HomeComponent
-            isFullWidth={isFullWidth}
-            toggleView={this.toggleView}
-          />
-          <SideBarComponent show={!isFullWidth} />
-        </div>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <Switch>
+      <RequireUnauthRoute path="/login" exact component={LoginContainer} />
+      <RequireAuthRoute path="/admin" exact component={AdminContainer} />
+      <Route path="/:id?" component={InvitationContainer} />
+    </Switch>
+  </Router>
+);
 
 export default App;

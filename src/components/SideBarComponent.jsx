@@ -55,15 +55,16 @@ export const SideBarComponent = ({ show }) => {
                       <span className="storyDate">25th November 2018</span>
                     </div>
                     <div className="col-md-6 col-sm-6">
-                      <img src={firstMeeting} alt="" className="responsiveImage" />
+                      <img
+                        src={firstMeeting}
+                        alt=""
+                        className="responsiveImage"
+                      />
                     </div>
                   </div>
                   <p className="textRight">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text.Lorem Ipsum is simply dummy text of the
-                    printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text.
+                    Before we met each other, we never new what it was like to
+                    be able to look at each other and smile for no reason.
                   </p>
                 </div>
               </div>
@@ -95,15 +96,17 @@ export const SideBarComponent = ({ show }) => {
                       <span className="storyDate">03rd Feb 2019</span>
                     </div>
                     <div className="col-md-6 col-sm-6">
-                      <img src={engagement} alt="" className="responsiveImage" />
+                      <img
+                        src={engagement}
+                        alt=""
+                        className="responsiveImage"
+                      />
                     </div>
                   </div>
                   <p className="textRight">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text.Lorem Ipsum is simply dummy text of the
-                    printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text.
+                    When we realize that we want to spend the rest of our life
+                    with each other, we wanted the rest of our life to start as
+                    soon as possible.
                   </p>
                 </div>
               </div>

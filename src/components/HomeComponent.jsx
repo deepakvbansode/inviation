@@ -15,21 +15,29 @@ export class HomeComponent extends React.Component {
     this.setState({ showContent: true });
   };
   render() {
-    const { isFullWidth, toggleView } = this.props;
+    const {
+      isFullWidth,
+      toggleView,
+      closeInvitation,
+      showInvitation,
+      invitation
+    } = this.props;
     const { showContent } = this.state;
-    let homeClasses = isFullWidth ? "mainWrapper col-12" : "mainWrapper col-md-6";
+    let homeClasses = isFullWidth
+      ? "mainWrapper col-12"
+      : "mainWrapper col-md-6";
     let contentClasses = showContent ? "contentWrapper" : "d-none";
     let toggleBtnClass = showContent ? "toggleBtn" : "d-none";
+
     return (
       <div className={homeClasses}>
-        <InviteModalComponent></InviteModalComponent>
+        <InviteModalComponent
+          invitation={invitation}
+          toggle={closeInvitation}
+          isOpen={showInvitation}
+        />
         <div className="image" onAnimationEnd={this.showContent} />
         <div className={`content ${showContent ? "show" : ""}`}>
-          {/* <div className={toggleBtnClass}>
-            <button className="btn btn-info" onClick={toggleView}>
-              +
-            </button>
-          </div> */}
           <div className={contentClasses}>
             <div className="marriageTitle">
               <span className="l1">W</span>
@@ -65,9 +73,7 @@ export class HomeComponent extends React.Component {
 
             <FlipClock marriageDate={this.marriageDate} />
 
-            <div className="marriageDate">
-                11.05.2019
-            </div>
+            <div className="marriageDate">11.05.2019</div>
             <div className="saveTitle">
               <span className="l1">S</span>
               <span className="l2">A</span>

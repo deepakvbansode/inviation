@@ -534,26 +534,62 @@
                 text-align: right
 .marriageDate
     background-image: url(../assets/images/heart-swirls-date.png)
-    height: 200px;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4em;
+    height: 200px
+    background-position: top
+    background-repeat: no-repeat
+    background-size: 200px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 4em
 .unit
     text-transform: capitalize
-.modal-body
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(/static/media/invite-background.b56e68c9.jpg);
-    height: 50vh;
+.modal-content
+    background-color: #3c3b3b
+    border: none
+    border-radius: 0px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    .inviteModal
+        height: 500px
+        width: 350px
+        margin: 0 auto
+        padding: 100px 20px
+        font-family: 'Great Vibes'
+        font-size: 1.5em
+        line-height: 1.5em
+        color: #1ab2c3
+        .to
+            font-weight: bold
+            font-size: 1.5em
+        .message
+            height: 200px
+            width: 300px
+            text-align: center
+            vertical-align: middle
+        .by
+            font-weight: bold
+            font-size: 1.5em
+            float: right
+            line-height: 1.5em
+
 @media (min-width: 426px)
     .image
         position: fixed
+    .modal-content
+        background-position: center 
+        background-repeat: no-repeat
+        background-image: url(../assets/images/invite-background.png)
+        background-size: cover
+        
     
 @media (max-width: 425px)
+    .modal-content
+        background-image: url(../assets/images/invite-background.png)
+        .inviteModal
+            height: 400px
+            width: 300px
     .storyLine
         display: none
         &:before
@@ -562,9 +598,23 @@
             display: none
     .time:before, .date:before, .together:before, .offer:before
         display: none
-    .sideBar .storySection .date
-        margin-top: 2px
-
+    .sideBar .storySection 
+        .date
+            margin-top: 2px
+        .offer
+            margin: 0px 
+        .together
+            margin: 0px 
+        .storyContent 
+            &.right
+                margin: 10px 
+                &:after
+                    content: none 
+            &.left
+                margin: 10px 
+                &:after
+                    content: none 
+    
     .flipClock
         width: 350px
         .flipUnitContainer
@@ -576,6 +626,9 @@
         z-index: 12
     .image
         position: absolute
+    .btn.btn-info
+        display: none 
+
 
     
         

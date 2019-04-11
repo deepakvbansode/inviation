@@ -1,42 +1,26 @@
-import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import React from "react";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 class InviteModalComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      modal: false
-    };
-
-    this.toggle = this.toggle.bind(this);
-  }
-
-  toggle() {
-    this.setState(prevState => ({
-      modal: !prevState.modal
-    }));
-  }
-
   render() {
+    const { invitation, isOpen } = this.props;
+    if (!isOpen || !invitation) return null;
     return (
       <div>
-        <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <Modal
+          isOpen={isOpen}
+          toggle={this.props.toggle}
+          className={this.props.className}
+        >
           <ModalBody>
             <div className="inviteModal">
-                <div>
-                  Dear Gautam,
-                </div>
-                <div>
-                  I am glad to invite you at the celebration of my marriage.
-                </div>
-                <div>
-                  Yours;
-                    Deepak Bansode
-                </div>
+              <div className="to">{invitation.to},</div>
+              <div className="message">{invitation.message}</div>
+              <div className="by">
+                Yours; <div>{invitation.by}</div>
+              </div>
             </div>
           </ModalBody>
-          
         </Modal>
       </div>
     );
