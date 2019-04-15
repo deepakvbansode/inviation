@@ -149,7 +149,6 @@
 .flipUnitContainer
 	display: block
 	position: relative
-    margin: 15px
 	width: 140px
 	height: 120px
 	perspective-origin: 50% 50%
@@ -594,9 +593,20 @@
         background-repeat: no-repeat
         background-image: url(../assets/images/invite-background.png)
         background-size: cover
+    .flipUnitContainer
+        margin: 12px
+        &:after
+            content: ":"
+            position: absolute
+            top: 50px
+            right: -16px
+            font-size: 3em
+        &:last-child 
+            &:after
+                content: none
         
     
-@media (max-width: 425px)
+@media (max-width: 425px)  //mobile
     .modal-content
         background-image: url(../assets/images/invite-background.png)
         .inviteModal
