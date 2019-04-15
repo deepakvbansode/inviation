@@ -7,6 +7,7 @@ import firstMeeting from "./../assets/images/gallery/first-met.jpeg";
 import firstDate from "./../assets/images/gallery/first-date.jpeg";
 import engagement from "./../assets/images/gallery/engagement.jpeg";
 import valentine from "./../assets/images/gallery/valentine.jpeg";
+import AdressContainer from "../containers/AdressContainer";
 
 export const SideBarComponent = ({ show }) => {
   let siderBarClasses = show ? "col-md-6 sideBar" : "d-none";
@@ -130,6 +131,14 @@ export const SideBarComponent = ({ show }) => {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="storyTitle">
+          <h2>Wedding Location</h2>
+          <div className="row">
+            <div className="col">
+              <AdressContainer />
             </div>
           </div>
         </div>

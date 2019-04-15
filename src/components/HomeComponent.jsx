@@ -63,9 +63,7 @@ export class HomeComponent extends React.Component {
               <span className="l21">E</span>
               <span className="l22">D</span>
             </div>
-            <div className="logo">
-              <img src="static/img/logo.png" alt="" />
-            </div>
+            <div className="logo" />
             <div className="brideGroom">
               Deepak <span>&</span> Vaibhavi
             </div>
@@ -73,7 +71,9 @@ export class HomeComponent extends React.Component {
 
             <FlipClock marriageDate={this.marriageDate} />
 
-            <div className="marriageDate">11.05.2019</div>
+            <div className="marriageDate">
+              11<span>.</span>05<span>.</span>2019
+            </div>
             <div className="saveTitle">
               <span className="l1">S</span>
               <span className="l2">A</span>
