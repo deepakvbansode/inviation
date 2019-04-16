@@ -1,10 +1,9 @@
 import React from "react";
 import { FlipComponent } from "./FlipComponent";
-import { CubeComponent } from "./CubeComponent";
 import groomImage from "./../assets/images/deepak.jpg";
 import brideImage from "./../assets/images/vaibhavi.jpg";
 import firstMeeting from "./../assets/images/first-met.jpeg";
-import firstDate from "./../assets/images/first-date.jpeg";
+import firstDate from "./../assets/images/first-date-1.jpg";
 import engagement from "./../assets/images/engagement.jpeg";
 import valentine from "./../assets/images/valentine.jpeg";
 import AdressContainer from "../containers/AdressContainer";
