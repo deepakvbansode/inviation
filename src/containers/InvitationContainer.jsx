@@ -14,7 +14,7 @@ class InvitationContainer extends Component {
         id: "288d16a0-5b7f-11e9-b38f-6dd391983701",
         message:
           "I would appreciate your presence at my special event – my wedding with the person I love and treasure. Without you, the wedding ceremony will not be the same. I will be extremely grateful if you decide to come and celebrate this happy occasion together with me! ",
-        to: "Dear Manish",
+        to: "Dear Kunal",
         by: "Deepak Bansode"
       },
       showInvitation: false
