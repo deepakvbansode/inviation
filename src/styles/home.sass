@@ -10,12 +10,14 @@
 //     100%
 //       background-position: -1500px
 
-.image
-    width: 240px
-    height: 296px
-    background-image: url(../assets/images/running_man.png)
-    +animation(manRun 1s steps(6) 1 )
-    transform: scale(1,1)
+// .image
+//     width: 240px
+//     height: 296px
+//     background-image: url(../assets/images/running_man.png)
+//     +animation(manRun 1s steps(6) 1 )
+//     transform: scale(1,1)
+ .image
+     background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)
 
 +keyframes(manRun)
    
@@ -257,7 +259,7 @@
 /*End Flip Component */
 
 .container-fluid
-    background-color: $grey11
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%)
 .mainWrapper
     display: flex
     justify-content: center
@@ -382,7 +384,7 @@
     height: auto
 .sideBar
     overflow: hidden
-    background-color: $grey8
+    background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
     .storyTitle
         text-align: center
         padding: 10px
@@ -563,7 +565,7 @@
         font-family: 'Great Vibes'
         font-size: 1.5em
         line-height: 1.5em
-        color: pink
+        color: #44164f
         .to
             font-weight: bold
             font-size: 1.5em

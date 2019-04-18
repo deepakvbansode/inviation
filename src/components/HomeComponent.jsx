@@ -6,7 +6,7 @@ export class HomeComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showContent: false
+      showContent: true
     };
     this.marriageDate = new Date(2019, 4, 11, 12, 30);
   }
@@ -37,7 +37,7 @@ export class HomeComponent extends React.Component {
           isOpen={showInvitation}
         />
         <div className="image" onAnimationEnd={this.showContent} />
-        <div className={`content ${showContent ? "show" : ""}`}>
+        <div className={`content show`}>
           <div className={contentClasses}>
             <div className="marriageTitle">
               <span className="l1">W</span>

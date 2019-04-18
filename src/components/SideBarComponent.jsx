@@ -2,10 +2,10 @@ import React from "react";
 import { FlipComponent } from "./FlipComponent";
 import groomImage from "./../assets/images/deepak.jpg";
 import brideImage from "./../assets/images/vaibhavi.jpg";
-import firstMeeting from "./../assets/images/first-met.jpeg";
+import firstMeeting from "./../assets/images/first-met.jpg";
 import firstDate from "./../assets/images/first-date-1.jpg";
-import engagement from "./../assets/images/engagement.jpeg";
-import valentine from "./../assets/images/valentine.jpeg";
+import engagement from "./../assets/images/engagement.jpg";
+import valentine from "./../assets/images/valentine.jpg";
 import AdressContainer from "../containers/AdressContainer";
 
 export const SideBarComponent = ({ show }) => {
@@ -50,11 +50,11 @@ export const SideBarComponent = ({ show }) => {
               <div className="time col-md-6 col-sm-6 col-xs-12">
                 <div className="storyContent left">
                   <div className="storyCBlock">
-                    <div className="col-md-6 col-sm-6">
+                    <div className="col-md-12">
                       <h3>We met for the first time</h3>
                       <span className="storyDate">25th November 2018</span>
                     </div>
-                    <div className="col-md-6 col-sm-6">
+                    <div className="col-md-12">
                       <img
                         src={firstMeeting}
                         alt=""
@@ -71,10 +71,10 @@ export const SideBarComponent = ({ show }) => {
               <div className="date col-md-6 col-sm-6 col-xs-12">
                 <div className="storyContent right animated">
                   <div className="storyCBlock">
-                    <div className="col-md-6 col-sm-6">
+                    <div className="col-md-12">
                       <img src={firstDate} alt="" className="responsiveImage" />
                     </div>
-                    <div className="col-md-6 col-sm-6">
+                    <div className="col-md-12">
                       <h3 className="pull-right">Our first date</h3>
                       <span className="storyDate">13th Jan 2019</span>
                     </div>
@@ -91,11 +91,11 @@ export const SideBarComponent = ({ show }) => {
               <div className="together col-md-6 col-sm-6 col-xs-12">
                 <div className="storyContent left animated">
                   <div className="storyCBlock">
-                    <div className="col-md-6 col-sm-6">
+                    <div className="col-md-12">
                       <h3>Our Engagement</h3>
                       <span className="storyDate">03rd Feb 2019</span>
                     </div>
-                    <div className="col-md-6 col-sm-6">
+                    <div className="col-md-12">
                       <img
                         src={engagement}
                         alt=""
@@ -113,10 +113,10 @@ export const SideBarComponent = ({ show }) => {
               <div className="offer col-md-6 col-sm-6 col-xs-12">
                 <div className="storyContent right animated">
                   <div className="storyCBlock">
-                    <div className="col-md-6 col-sm-6">
+                    <div className="col-md-12">
                       <img src={valentine} alt="" className="responsiveImage" />
                     </div>
-                    <div className="col-md-6 col-sm-6">
+                    <div className="col-md-12">
                       <h3 className="pull-right">First Valentine</h3>
                       <span className="storyDate">14th Feb 2019</span>
                     </div>
