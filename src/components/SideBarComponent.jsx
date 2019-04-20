@@ -52,7 +52,7 @@ export const SideBarComponent = ({ show }) => {
                   <div className="storyCBlock">
                     <div className="col-md-12">
                       <h3>We met for the first time</h3>
-                      <span className="storyDate">25th November 2018</span>
+                      <span className="storyDate">25th Nov 2018</span>
                     </div>
                     <div className="col-md-12">
                       <img
@@ -62,7 +62,7 @@ export const SideBarComponent = ({ show }) => {
                       />
                     </div>
                   </div>
-                  <p className="textRight">
+                  <p>
                     Before we met each other, we never new what it was like to
                     be able to look at each other and smile for no reason.
                   </p>
@@ -103,7 +103,7 @@ export const SideBarComponent = ({ show }) => {
                       />
                     </div>
                   </div>
-                  <p className="textRight">
+                  <p>
                     When we realize that we want to spend the rest of our life
                     with each other, we wanted the rest of our life to start as
                     soon as possible.
@@ -136,8 +136,17 @@ export const SideBarComponent = ({ show }) => {
         <div className="storyTitle">
           <h2>Wedding Location</h2>
           <div className="row">
-            <div className="col">
+            <div className="col addressContainer">
               <AdressContainer />
+            </div>
+          </div>
+        </div>
+        <div className="storyTitle">
+          <h2>Note</h2>
+          <div className="row">
+            <div className="col">
+              Thank you for helping us to save trees by accepting this online inviation.
+              Please, no gifts. Your presence is the best gift we can hope to receive.
             </div>
           </div>
         </div>

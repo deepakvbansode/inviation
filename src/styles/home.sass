@@ -259,7 +259,10 @@
 /*End Flip Component */
 
 .container-fluid
-    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%)
+    background-image: url(../assets/images/pink-background.jpg)
+    background-repeat: no-repeat
+    background-attachment: fixed
+    //background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%)
 .mainWrapper
     display: flex
     justify-content: center
@@ -384,10 +387,15 @@
     height: auto
 .sideBar
     overflow: hidden
-    background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
+    background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%)
     .storyTitle
         text-align: center
         padding: 10px
+        h2
+            text-transform: uppercase
+            background: linear-gradient(to right, #30CFD0 0%, #330867 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
     .groom > div
         float: right
 
@@ -521,6 +529,10 @@
             .storyCBlock
                 float: left
                 width: 100%
+                h3
+                    background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%)
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
             .storyDate
                 background: $gold3
                 padding: 8px 15px
@@ -535,6 +547,7 @@
             p
                 padding: 5px
                 display: inline-block
+                text-align: justify
 .marriageDate
     background-image: url(../assets/images/heart-swirls-date.png)
     height: 150px
@@ -565,7 +578,7 @@
         font-family: 'Great Vibes'
         font-size: 1.5em
         line-height: 1.5em
-        color: #44164f
+        color: #c10c3d
         .to
             font-weight: bold
             font-size: 1.5em
@@ -610,7 +623,7 @@
     
 @media (max-width: 425px)  //mobile
     .container-fluid
-        background-image: linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%);
+        background-image: linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%)
     .modal-content
         background-image: url(../assets/images/invite-background.png)
         .inviteModal
@@ -670,7 +683,7 @@
 
     
 .mapDiv
-    height: 500px
+    height: 700px
     width: 100%
     h4
         color: black
@@ -679,3 +692,5 @@
         margin: 20px 5px
         div
             padding: 5px
+.addressContainer
+    height: 250px

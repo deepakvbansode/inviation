@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
-
+import { isMobileDevice } from "../shared/utitlity/common";
 const mapStyles = {
-  width: "100%",
-  height: "100%"
+  width: isMobileDevice() ? "90%" : "95%",
+  height: "65%"
 };
 
 export class AdressContainer extends Component {
