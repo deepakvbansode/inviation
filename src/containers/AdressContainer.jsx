@@ -3,7 +3,7 @@ import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 import { isMobileDevice } from "../shared/utitlity/common";
 const mapStyles = {
   width: isMobileDevice() ? "90%" : "95%",
-  height: "65%"
+  height: isMobileDevice() ? "55%" : "65%"
 };
 
 export class AdressContainer extends Component {
@@ -37,7 +37,7 @@ export class AdressContainer extends Component {
         <div className="address">
           <div>Chaitanya Gagangiri Mangal Karyalay</div>
           <div>
-            s.no 52, Kamal Niwas, kashinath nagar, Bhairav Nagar, Dhanori, Pune,
+            S.No 52, Kamal Niwas, Kashinath Nagar, Bhairav Nagar, Dhanori, Pune,
             Maharashtra 411015
           </div>
         </div>
