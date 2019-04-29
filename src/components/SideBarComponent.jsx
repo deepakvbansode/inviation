@@ -63,8 +63,8 @@ export const SideBarComponent = ({ show }) => {
                     </div>
                   </div>
                   <p>
-                    Before we met each other, we never new what it was like to
-                    be able to look at each other and smile for no reason.
+                    Before we met each other, we never knew what it was like to
+                    be able to look at someone special and smile for no reason.
                   </p>
                 </div>
               </div>
@@ -104,9 +104,8 @@ export const SideBarComponent = ({ show }) => {
                     </div>
                   </div>
                   <p>
-                    When we realize that we want to spend the rest of our life
-                    with each other, we wanted the rest of our life to start as
-                    soon as possible.
+                    When we realized that we wanted to spend the rest of our lives together
+                    , we knew this would be the best phase awaiting us.
                   </p>
                 </div>
               </div>
