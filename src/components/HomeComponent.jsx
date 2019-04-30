@@ -74,6 +74,9 @@ export class HomeComponent extends React.Component {
             <div className="marriageDate">
               11<span>.</span>05<span>.</span>2019
             </div>
+            <div className="marriageTime">
+              12<span>:</span>30 PM
+            </div>
             <div className="saveTitle">
               <span className="l1">S</span>
               <span className="l2">A</span>

@@ -52,7 +52,9 @@ export const SideBarComponent = ({ show }) => {
                   <div className="storyCBlock">
                     <div className="col-md-12">
                       <h3>We met for the first time</h3>
-                      <span className="storyDate">25th Nov 2018</span>
+                      <span className="storyDate">
+                        25<sup>th</sup> Nov 2018
+                      </span>
                     </div>
                     <div className="col-md-12">
                       <img
@@ -76,15 +78,20 @@ export const SideBarComponent = ({ show }) => {
                     </div>
                     <div className="col-md-12">
                       <h3 className="pull-right">Our first date</h3>
-                      <span className="storyDate">13th Jan 2019</span>
+                      <span className="storyDate">
+                        13<sup>th</sup> Jan 2019
+                      </span>
                     </div>
                   </div>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text.Lorem Ipsum is simply dummy text of the
-                    printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text.
+                    It was indeed a pleasant shock to know that we resemble each
+                    other so much in so many ways. The biggest surprise is
+                    knowing that your partner has the same quirks as you do :)
+                    and knowing each other has been like a journey of exploring
+                    the self in greater depths and getting newer insights with
+                    every passing moment. Since our journeys were so alike we
+                    decided that we will trod them together as one although in
+                    two different bodies.
                   </p>
                 </div>
               </div>
@@ -93,7 +100,9 @@ export const SideBarComponent = ({ show }) => {
                   <div className="storyCBlock">
                     <div className="col-md-12">
                       <h3>Our Engagement</h3>
-                      <span className="storyDate">03rd Feb 2019</span>
+                      <span className="storyDate">
+                        03<sup>rd</sup> Feb 2019
+                      </span>
                     </div>
                     <div className="col-md-12">
                       <img
@@ -104,8 +113,9 @@ export const SideBarComponent = ({ show }) => {
                     </div>
                   </div>
                   <p>
-                    When we realized that we wanted to spend the rest of our lives together
-                    , we knew this would be the best phase awaiting us.
+                    When we realized that we wanted to spend the rest of our
+                    lives together , we knew this would be the best phase
+                    awaiting us.
                   </p>
                 </div>
               </div>
@@ -117,15 +127,17 @@ export const SideBarComponent = ({ show }) => {
                     </div>
                     <div className="col-md-12">
                       <h3 className="pull-right">First Valentine</h3>
-                      <span className="storyDate">14th Feb 2019</span>
+                      <span className="storyDate">
+                        14<sup>th</sup> Feb 2019
+                      </span>
                     </div>
                   </div>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text.Lorem Ipsum is simply dummy text of the
-                    printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text.
+                    It was the first milestone of love that we achieved together
+                    thereby making our bond of love stronger than ever and our
+                    commitment to each other more sacred and holy. The pleasure
+                    of being together on a special day was an experience beyond
+                    words and a memory to cherish for lifetime.
                   </p>
                 </div>
               </div>
@@ -144,8 +156,9 @@ export const SideBarComponent = ({ show }) => {
           <h2>Note</h2>
           <div className="row">
             <div className="col">
-              Thank you for helping us to save trees by accepting this online inviation.
-              Please, no gifts. Your presence is the best gift we can hope to receive.
+              Thank you for helping us to save trees by accepting this online
+              inviation. Please, no gifts. Your presence is the best gift we can
+              hope to receive.
             </div>
           </div>
         </div>

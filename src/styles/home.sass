@@ -551,14 +551,23 @@
                 text-align: justify
 .marriageDate
     background-image: url(../assets/images/heart-swirls-date.png)
-    height: 150px
+    height: 100px
     background-position: top
     background-repeat: no-repeat
-    background-size: 150px
+    background-size: 100px
     display: flex
     align-items: center
     justify-content: center
     font-size: 4em
+    span
+        color: $gold3
+.marriageTime
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 2em
+    margin-bottom: 15px
     span
         color: $gold3
 .unit
@@ -609,6 +618,7 @@
         background-repeat: no-repeat
         background-image: url(../assets/images/invite-background.png)
         background-size: cover
+        background-color: #e4e9d7
     .flipUnitContainer
         margin: 12px
         &:after
@@ -627,6 +637,7 @@
         background-image: linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%)
     .modal-content
         background-image: url(../assets/images/invite-background.png)
+        background-color: #e4e9d7
         .inviteModal
             height: 400px
             width: 300px
@@ -656,6 +667,8 @@
                     content: none 
             .textRight
                 text-align: center
+    .marriageTime
+        margin-bottom: 30px
     
     .flipClock
         width: 350px
