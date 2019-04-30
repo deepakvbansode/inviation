@@ -3,8 +3,8 @@ import { FlipComponent } from "./FlipComponent";
 import groomImage from "./../assets/images/deepak.jpg";
 import brideImage from "./../assets/images/vaibhavi.jpg";
 import firstMeeting from "./../assets/images/first-met.jpg";
-import firstDate from "./../assets/images/first-date-1.jpg";
-import engagement from "./../assets/images/engagement.jpg";
+import firstDate from "./../assets/images/first-date-final.jpg";
+import engagement from "./../assets/images/engagement-final.jpg";
 import valentine from "./../assets/images/valentine.jpg";
 import AdressContainer from "../containers/AdressContainer";
 
