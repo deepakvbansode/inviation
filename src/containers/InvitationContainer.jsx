@@ -10,20 +10,14 @@ class InvitationContainer extends Component {
     super(props);
     this.state = {
       isFullWidth: !isMobileDevice(),
-      invitation: {
-        id: "288d16a0-5b7f-11e9-b38f-6dd391983701",
-        message:
-          "I would appreciate your presence at my special event – my wedding with the person I love and treasure. Without you, the wedding ceremony will not be the same. I will be extremely grateful if you decide to come and celebrate this happy occasion together with me! ",
-        to: "Dear Kunal",
-        by: "Deepak Bansode"
-      },
+      invitation: null,
       showInvitation: false
     };
   }
   componentDidMount() {
     let { id } = this.props.match.params;
     if (id) {
-      //this.getInvitations(id);
+      this.getInvitations(id);
       setTimeout(() => this.setState({ showInvitation: true }), 6000);
     }
   }

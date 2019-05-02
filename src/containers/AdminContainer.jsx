@@ -13,12 +13,12 @@ class AdminContainer extends Component {
       invitations: []
     };
   }
-  saveInvite = (to, message, by) => {
+  saveInvite = (to, message, from) => {
     this.setState({ isSavingInvite: true });
     API.save(API_ENDPOINTS.saveIntvite, {
       to,
       message,
-      by,
+      from,
       id: uuidv1()
     }).then(response => {
       if (response.status === 200) this.getAllInvites();

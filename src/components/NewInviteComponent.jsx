@@ -5,8 +5,8 @@ const intitalState = {
   toError: false,
   message: "",
   messageError: false,
-  by: "",
-  byError: false
+  from: "",
+  fromError: false
 };
 class NewInviteComponent extends Component {
   constructor(props) {
@@ -22,19 +22,19 @@ class NewInviteComponent extends Component {
   addInvite = () => {
     let toError = false;
     let messageError = false;
-    let byError = false;
+    let fromError = false;
     if (isEmpty(this.state.to)) toError = true;
     if (isEmpty(this.state.message)) messageError = true;
-    if (isEmpty(this.state.by)) byError = true;
-    if (toError || messageError || byError)
-      this.setState({ toError, messageError, byError });
+    if (isEmpty(this.state.from)) fromError = true;
+    if (toError || messageError || fromError)
+      this.setState({ toError, messageError, fromError });
     else {
-      this.props.saveInvite(this.state.to, this.state.message, this.state.by);
+      this.props.saveInvite(this.state.to, this.state.message, this.state.from);
       this.setState(intitalState);
     }
   };
   render() {
-    const { to, toError, message, messageError, by, byError } = this.state;
+    const { to, toError, message, messageError, from, fromError } = this.state;
     return (
       <div className="row centerForm">
         <form>
@@ -67,11 +67,11 @@ class NewInviteComponent extends Component {
             <label htmlFor="formGroupExampleInput2">By:</label>
             <input
               type="text"
-              className={`form-control ${byError ? "error" : ""}`}
+              className={`form-control ${fromError ? "error" : ""}`}
               id="formGroupExampleInput2"
               placeholder="By"
-              name="by"
-              value={by}
+              name="from"
+              value={from}
               onChange={this.onUserType}
             />
           </div>

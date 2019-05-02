@@ -17,7 +17,7 @@ class InviteModalComponent extends React.Component {
               <div className="to">{invitation.to},</div>
               <div className="message">{invitation.message}</div>
               <div className="by">
-                Yours; <div>{invitation.by}</div>
+                Yours; <div>{invitation.from}</div>
               </div>
             </div>
           </ModalBody>
