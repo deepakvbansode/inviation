@@ -36,7 +36,6 @@ export class HomeComponent extends React.Component {
           toggle={closeInvitation}
           isOpen={showInvitation}
         />
-        <div className="image" onAnimationEnd={this.showContent} />
         <div className={`content show`}>
           <div className={contentClasses}>
             <div className="marriageTitle">

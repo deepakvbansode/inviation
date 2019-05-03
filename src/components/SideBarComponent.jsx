@@ -10,8 +10,7 @@ import AdressContainer from "../containers/AdressContainer";
 
 export const SideBarComponent = ({ show }) => {
   let siderBarClasses = show ? "col-md-6 sideBar" : "d-none";
-  if (show)
-    return (
+  return (
       <div className={siderBarClasses}>
         <div className="storyTitle">
           <h2>HAPPY COUPLE</h2>
@@ -162,7 +161,5 @@ export const SideBarComponent = ({ show }) => {
             </div>
           </div>
         </div>
-      </div>
-    );
-  else return null;
+      </div>)
 };
